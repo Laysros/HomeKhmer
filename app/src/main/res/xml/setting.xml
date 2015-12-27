@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <EditTextPreference android:title="Your Name"
+        android:key="username"
+        android:summary="Please provide your username"></EditTextPreference>
+    <CheckBoxPreference android:title="Application Updates"
+        android:defaultValue="false"
+        android:summary="This option if selected will allow the application to check for latest versions."
+        android:key="applicationUpdates" />
+    <ListPreference     android:title="Download Details"
+        android:summary="Select the kind of data that you would like to download"
+        android:key="downloadType"
+        android:defaultValue="1"
+        android:entries="@array/listArray"
+        android:entryValues="@array/listValues" />
+    <ListPreference
+        android:title="Language"
+        android:summary="Choose translation language"
+        android:key="languge"
+        android:defaultValue="1"
+        android:entries="@array/languageArray"
+        android:entryValues="@array/languageValue"
+        />
+    <com.sabayrean.homemenu.SettingClear
+        android:dialogMessage="Are you sure you want clear downloaded data?"
+        android:key="clear"
+        android:summary="Clear data you have downloaded"
+        android:negativeButtonText="No"
+        android:positiveButtonText="Yes"
+        android:title="Clear downloaded data" />
+
+</PreferenceScreen>
